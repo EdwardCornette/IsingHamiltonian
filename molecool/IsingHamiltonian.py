@@ -1,5 +1,7 @@
 import numpy as np
 from .bitstring import *
+
+
 class IsingHamiltonian:
     """Class for an Ising Hamiltonian of arbitrary dimensionality
 
@@ -24,8 +26,6 @@ class IsingHamiltonian:
         self.J = J
         self.mu = mu
 
-        
-
     def energy(self, config):
         """Compute energy of configuration, `config`
 
@@ -44,9 +44,8 @@ class IsingHamiltonian:
         """
         if len(config.config) != len(self.J):
             pass
-            #error("wrong dimension")
+            # error("wrong dimension")
 
-    
         e = 0.0
 
         for i in range(config.N):
@@ -81,8 +80,7 @@ class IsingHamiltonian:
 
         """
         pass
-        #return del_e
-
+        # return del_e
 
     def metropolis_sweep(self, conf, T=1.0):
         """Perform a single sweep through all the sites and return updated configuration
@@ -127,7 +125,7 @@ class IsingHamiltonian:
 
         conf = BitString(self.N)
 
-        for i in range(2 ** conf.N):
+        for i in range(2**conf.N):
             conf.set_int_config(i)
             Ei = self.energy(conf)
             Zi = np.exp(-Ei / T)
