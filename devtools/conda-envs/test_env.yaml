@@ -8,6 +8,7 @@ dependencies:
     # Base depends
   - python
   - pip
+  
 
   # Package dependencies
   - numpy
@@ -16,6 +17,8 @@ dependencies:
   - pytest
   - pytest-cov
   - codecov
+  - networkx
+  - matplotlib.pyplot
 
     # Pip-only installs
   #- pip:
