@@ -144,3 +144,18 @@ class IsingHamiltonian:
         HC = (EE - E * E) / (T * T)
         MS = (MM - M * M) / T
         return E, M, HC, MS
+    def get_lowest_energy_config(self, verbose):
+        emin = 0
+
+        my_bs = BitString(self.N)
+        cmin = BitString(self.N)
+        for i in range (0, 2**(len(my_bs))):
+            my_bs.set_int_config(i)
+            
+            currentEn = self.energy(my_bs)
+            
+            if currentEn < emin:
+                emin = currentEn
+                cmin.set_int_config(i)
+            print(str(currentEn) + " " + str(my_bs))
+        return emin, cmin
