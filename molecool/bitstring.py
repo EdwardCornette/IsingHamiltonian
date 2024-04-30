@@ -55,6 +55,14 @@ class BitString:
         return counter
 
     def off(self):  # number of off bits
+        """returns the number of off bits
+
+        Returns
+        -------
+        counter  : int
+            number of off bits
+        
+        """
         counter = 0
         for i in range(0, self.N):
             if self.config[i] == 0:
