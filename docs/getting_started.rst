@@ -2,6 +2,7 @@ Getting Started
 ===============
 
 This page details how to get started with molecool. 
+Install the package from https://github.com/EdwardCornette/MonteCarlo
 
 **Requirements**
 
