@@ -5,6 +5,8 @@
 
 Welcome to molecool's documentation!
 =========================================================
+molecool is a Python package designed to perform analysis on the average Energy, Magnetization, 
+Heat Capacity and Magnetization Susceptibility of an IsingHamiltonian object.
 
 .. toctree::
    :maxdepth: 2
