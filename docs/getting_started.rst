@@ -3,13 +3,13 @@ Getting Started
 
 This page details how to get started with molecool. 
 
-Requirements
-=============
+**Requirements**
+
 numpy
 
 
-Using molecool
-==============
+**Using molecool**
+
 an example of using molecool to calculate the average Energy, Magnetization, Heat Capacity,
 and Magnetization Susceptibility of a 6 site hexagon shaped lattice with edge weight 1, at 1 kelvin
 
