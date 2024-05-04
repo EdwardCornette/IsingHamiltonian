@@ -169,5 +169,5 @@ class IsingHamiltonian:
             if currentEn < emin:
                 emin = currentEn
                 cmin.set_int_config(i)
-            print(str(currentEn) + " " + str(my_bs))
+            #print(str(currentEn) + " " + str(my_bs))
         return emin, cmin

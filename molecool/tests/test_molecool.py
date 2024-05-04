@@ -40,3 +40,23 @@ def test_molecool_compute_average_values():
     assert(np.isclose(M,   -0.00000000))
     assert(np.isclose(HC,   0.31925472))
     assert(np.isclose(MS,   0.01202961))
+
+def test_molecool_lowest_energy():
+        
+
+    mus = [0.0 for i in range(4)]
+    J = [[] for i in range(4)]
+    for site in range(4-1):
+        J[site].append((site+1, 1+.1*site))
+
+    ham = molecool.IsingHamiltonian(4,J,mus)
+    ham.mu[0] = -1.2
+
+    emin, cmin = ham.get_lowest_energy_config()
+    bs = molecool.BitString(4)
+    bs.set_int_config(10)
+
+    assert(np.isclose(emin, -4.5))
+    assert(cmin == bs)
+        
+        
