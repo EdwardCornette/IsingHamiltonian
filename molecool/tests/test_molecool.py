@@ -59,4 +59,26 @@ def test_molecool_lowest_energy():
     assert(np.isclose(emin, -4.5))
     assert(cmin == bs)
         
-        
+def test_bitstring_methods():
+    bs = molecool.BitString(4)
+    assert((bs.config == [0,0,0,0]).all())
+    assert(len(bs) == 4)
+
+    bs.set_int_config(3)
+    assert ((bs.config == [0,0,1,1]).all())
+
+    on = bs.on()
+    off = bs.off()
+    assert(on == 2)
+    assert(off == 2)
+
+    bs.flip_site(0)
+    assert((bs.config == [1,0,1,1]).all())
+
+    assert(bs.int() == 11)
+
+    bs.set_config([0,0,0,1])
+    assert((bs.config== [0,0,0,1]).all())
+
+
+    
